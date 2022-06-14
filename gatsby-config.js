@@ -6,12 +6,17 @@ module.exports = {
   plugins: [{
     resolve: 'gatsby-source-wordpress',
     options: {
-      "url": "https://wordpress-prod.iziwork.com/graphql"
+      baseUrl: 'wordpress-prod.iziwork.com',
+      hostingWPCOM: false,
+      protocol: 'https',
+      useACF: true,
+      auth: {},
+      verboseOutput: false
     }
   }, "gatsby-plugin-sass", {
     resolve: 'gatsby-plugin-google-analytics',
     options: {
-      "trackingId": ""
+      "trackingId": "G-K9CY0DTZK5"
     }
   }]
 };

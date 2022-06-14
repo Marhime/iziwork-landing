@@ -1,0 +1,485 @@
+.sigle-title {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-weight: 700;
+    color: #031B4A;
+    font-size: 18px;
+    img {
+        width: 40px;
+    }
+}
+
+.container-faq {
+    @include mobile-only {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    max-width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-faq-fluid {
+    @include mobile-only {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    max-width: 1340px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.landing-faq {
+    scroll-behavior: smooth;
+    &.blue {
+        h1 strong, .section-media h2 strong {
+            color: $blue;
+        }
+    }
+    &.yellow {
+        h1 strong, .section-media h2 strong {
+            color: $yellow;
+        }
+    }
+    &.green {
+        h1 strong, .section-media h2 strong {
+            color: $green;
+        }
+    }
+}
+
+header {
+    padding: 20px;
+    @include tablet {
+        padding: 40px 0;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-mobile {
+        display: block;
+        width: 30px;
+        @include tablet {
+            display: none;
+        }
+    }
+
+    // .burger {
+    //     display: flex;
+    //     flex-direction: column;
+    //     gap: 3px;
+    //     width: 20px;
+    //     cursor: pointer;
+    //     & > span {
+    //         display: block;
+    //         height: 3px;
+    //         width: 100%;
+    //         border-radius: 15px;
+    //         background-color: $text-color;
+    //     }
+
+
+    //     @include tablet {
+    //         display: none;
+    //     }
+    // }
+
+    .logo-desktop {
+        display: none;
+        @include tablet {
+            display: block;
+            width: 117px;
+        }
+    }
+
+    nav {
+        a {
+            display: none;
+        }
+        .button {
+            display: block;
+            padding: 10px 20px;
+            background-color: $green;
+            font-weight: 700;
+            color: white;
+            border-radius: 15px;
+            text-decoration: none;
+        }
+        @include tablet {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            a {
+                display: block;
+                font-weight: 700;
+                color: $text-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.section-header {
+    padding-top: 60px;
+    h1 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 900;
+        padding: 0 30px;
+        line-height: 1.2;
+    }
+    h2 {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 40px;
+        font-weight: 400;
+        strong {
+            font-weight: 600;
+        }
+    }
+    @include tablet {
+        padding: 80px 0 0 0;
+        h1 {
+            font-size: 48px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 60px;
+        }
+    }
+}
+
+.topics {
+    margin-top: 30px;
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 15px;
+        @include mobile-only {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        &-subtitle {
+            font-size: 14px;
+        }
+
+        img {
+            height: 75px;
+        }
+
+        &--blue {
+            &.active {
+                background-color: $blue-100;
+            }
+        }
+        &--green {
+            &.active {
+                background-color: $green-100;
+            }
+        }
+        &--yellow {
+            &.active {
+                background-color: $yellow-100;
+            }
+        }
+        
+    }
+    @include tablet {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        &__item {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: background-color .2s ease-in-out;
+            cursor: pointer;
+
+            &-content {
+                height: 100%;
+            }
+
+            &-subtitle {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            &--blue {
+                &:hover {
+                    background-color: $blue-100;
+                }
+            }
+            &--green {
+                &:hover {
+                    background-color: $green-100;
+                }
+            }
+            &--yellow {
+                &:hover {
+                    background-color: $yellow-100;
+                }
+            }
+        }
+    }
+}
+
+.section-media {
+    padding-top: 70px;
+
+    h2 {
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 1.2;
+        text-align: center;
+        @include mobile-only {
+            padding: 0 50px;
+        }
+    }
+
+    .media {
+        margin-top: 50px;
+
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+
+        &__video {
+            background-color: $blue-100;
+            border-radius: 15px;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-utils {
+            padding: 50px 0 0;     
+            
+            &__item {
+                .sigle-title {
+                    margin-bottom: 30px;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 50px;
+                }
+            }
+
+            .pdf-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                
+                &__item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 15px;
+                    &-button {
+                        padding: 7px 15px;
+                        border-radius: 15px;
+                        background-color: $blue;
+                        display: flex;
+                        gap: 15px;
+                        align-items: center;
+                        font-weight: 700;
+                        color: white;
+                        text-decoration: none;
+                    }
+                    &-size {
+                        font-weight: 600;
+                        color: $grey;
+                    }
+                    &-link {
+                        text-decoration: underline;
+                        color: $blue;
+                        font-weight: 600;
+                        cursor: pointer;
+                        display: inline-block;
+                        width: fit-content;
+                    }
+                }
+            }
+        }
+    }
+
+    @include tablet {
+        margin-top: 80px;
+        h2 {
+            font-size: 48px;
+        }
+        .media {
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+    
+            &-utils {
+                padding: 50px;     
+                
+                &__item {
+                    .sigle-title {
+                        margin-bottom: 30px;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 50px;
+                    }
+                }
+    
+                .pdf-section {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+    
+                    &__item {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-blog {
+    margin-top: 70px;
+    padding: 50px 0;
+    background-color: #272356;
+    background-image: url('/Iziwork-Pattern-30.svg');
+    background-size: 100vw;
+    background-repeat: repeat;
+    background-size: cover;
+
+    h2 {
+        text-align: center;
+        font-weight: 900;
+        font-size: 24px;
+        color: white;
+        margin-bottom: 40px;
+        strong {
+            color: $green;
+        }
+    }
+
+    .first-article {
+        color: white;
+        .article-image {
+            border-radius: 15px;
+        }
+        .article-content {
+            padding: 25px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            .title {
+                font-weight: 900;
+                font-size: 24px;
+            }
+
+            .date {
+                font-size: 14px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    @include tablet {
+        margin-top: 130px;
+        padding: 60px 0;
+        h2 {
+            font-size: 48px;
+            margin-bottom: 80px;
+        }
+        .first-article {
+            display: flex;
+            .article-image {
+                flex-basis: 60%;
+            }
+            .article-content {
+                padding: 25px 50px;
+    
+                .title {
+                    font-size: 36px;
+                }
+    
+                .date {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .other-articles {
+        margin-top: 30px;
+        @include tablet {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .normal-article {
+            @include mobile-only {
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+            .article-image {
+                width: 100%;
+                display: block;
+                border-radius: 15px;
+            }
+
+            .article-content {
+                padding: 25px 0;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                color: white;
+    
+                .title {
+                    font-weight: 900;
+                    font-size: 24px;
+                }
+    
+                .date {
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+            }
+
+        }
+    }
+
+
+    .sigle-title {
+        color: white;
+    }
+}
