@@ -255,10 +255,11 @@ const IndexPage = ({location, data}) => {
             <div className="article-content">
               <p className="sigle-title">
                 <img  src="/sigle.svg"/>
-                TUTORIALS IN PDF FORMAT
+                Onboarding Iziwork
               </p>
               <p className="title">Boom di dimissioni nella fascia 25-35 anni</p>
               <p className="date">21 GENNAIO 2022</p>
+              <a target="_blank" href='https://www.iziwork.com/it/blog/occupazione-ripresa-2021' className='button'>Read more</a>
             </div>
           </article>
           <div className="other-articles">
@@ -267,20 +268,22 @@ const IndexPage = ({location, data}) => {
               <div className="article-content">
                 <p className="sigle-title">
                   <img  src="/sigle.svg"/>
-                  TUTORIALS IN PDF FORMAT
+                  Onboarding Iziwork
                 </p>
                 <p className="title">Boom di dimissioni nella fascia 25-35 anni</p>
                 <p className="date">21 GENNAIO 2022</p>
+                <a target="_blank" href='https://www.iziwork.com/it/blog/occupazione-ripresa-2021' className='button'>Read more</a>
               </div>
             </article>
             <article className="normal-article">
               <img className="article-image" src="/image.jpg"/>
               <div className="article-content">
                 <p className="sigle-title"><img  src="/sigle.svg"/>
-                  TUTORIALS IN PDF FORMAT
+                  Onboarding Iziwork
                 </p>
                 <p className="title">Boom di dimissioni nella fascia 25-35 anni</p>
                 <p className="date">21 GENNAIO 2022</p>
+                <a target="_blank" href='https://www.iziwork.com/it/blog/occupazione-ripresa-2021' className='button'>Read more</a>
               </div>
             </article>
             <article className="normal-article">
@@ -288,10 +291,11 @@ const IndexPage = ({location, data}) => {
               <div className="article-content">
                 <p className="sigle-title">
                   <img  src="/sigle.svg"/>
-                  TUTORIALS IN PDF FORMAT
+                  Onboarding Iziwork
                 </p>
                 <p className="title">Boom di dimissioni nella fascia 25-35 anni</p>
                 <p className="date">21 GENNAIO 2022</p>
+                <a target="_blank" href='https://www.iziwork.com/it/blog/occupazione-ripresa-2021' className='button'>Read more</a>
               </div>
             </article>
             <article className="normal-article">
@@ -299,10 +303,11 @@ const IndexPage = ({location, data}) => {
               <div className="article-content">
                 <p className="sigle-title">
                   <img  src="/sigle.svg"/>
-                  TUTORIALS IN PDF FORMAT
+                  Onboarding Iziwork
                 </p>
                 <p className="title">Boom di dimissioni nella fascia 25-35 anni</p>
                 <p className="date">21 GENNAIO 2022</p>
+                <a target="_blank" href='https://www.iziwork.com/it/blog/occupazione-ripresa-2021' className='button'>Read more</a>
               </div>
             </article>
           </div>

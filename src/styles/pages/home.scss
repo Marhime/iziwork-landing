@@ -417,6 +417,15 @@ header {
                 font-size: 14px;
                 font-weight: 300;
             }
+            .button {
+                padding: 10px 20px;
+                background-color: $green;
+                border-radius: 15px;
+                display: inline-block;
+                text-decoration: none;
+                color: white;
+                width: fit-content;
+            }
         }
     }
 
@@ -482,6 +491,15 @@ header {
                 .date {
                     font-size: 16px;
                     font-weight: 300;
+                }
+                .button {
+                    padding: 10px 20px;
+                    background-color: $green;
+                    border-radius: 15px;
+                    display: inline-block;
+                    text-decoration: none;
+                    color: white;
+                    width: fit-content;
                 }
             }
 
