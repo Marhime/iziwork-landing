@@ -1,12 +1,14 @@
 .sigle-title {
     display: flex;
     gap: 15px;
-    align-items: center;
+    align-items: flex-start;
     font-weight: 700;
     color: #031B4A;
     font-size: 18px;
+    text-transform: uppercase;
     img {
         width: 40px;
+        margin-top: 3px;
     }
 }
 
@@ -36,15 +38,24 @@
         h1 strong, .section-media h2 strong {
             color: $blue;
         }
+        .pdf-section__item-button {
+            background-color: $blue;
+        }
     }
     &.yellow {
         h1 strong, .section-media h2 strong {
             color: $yellow;
         }
+        .pdf-section__item-button {
+            background-color: $yellow;
+        }
     }
     &.green {
         h1 strong, .section-media h2 strong {
             color: $green;
+        }
+        .pdf-section__item-button {
+            background-color: $green;
         }
     }
 }
@@ -304,7 +315,6 @@ header {
                     &-button {
                         padding: 7px 15px;
                         border-radius: 15px;
-                        background-color: $blue;
                         display: flex;
                         gap: 15px;
                         align-items: center;
