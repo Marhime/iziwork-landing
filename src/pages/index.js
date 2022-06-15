@@ -52,12 +52,12 @@ const IndexPage = ({location, data}) => {
         <img className="logo-desktop" src="/new-logo.svg" />
         <nav>
           <Link to='#blog'>Blog</Link>
-          <a target="_blank" href='https://www.iziwork.com/it/' className="button">Go to website</a>
+          <a target="_blank" href='https://www.iziwork.com/it/' className="button">Vai al sito</a>
         </nav>
       </header>
       <section id="faq" className="section-header">
         <div className="container-faq">
-          <h1>Con iziwork rispondi a tutte le tue <strong>domande</strong> riguardo</h1>
+          <h1>Con iziwork rispondi a tutte le tue <strong>domande</strong> riguardo:</h1>
           <h2><strong>Scegli</strong> l’argomento</h2>
           <div ref={topics} className="topics">
 
@@ -69,19 +69,19 @@ const IndexPage = ({location, data}) => {
                 </div>
               </div>
               
-              <div data-topic={2} onClick={() => handleChangeTopic(2, 'La busta paga')} className={`topics__item topics__item--yellow ${topic == 2 ? 'active' : ''}`}>
+              <div data-topic={2} onClick={() => handleChangeTopic(2, 'La busta paga & IBAN')} className={`topics__item topics__item--yellow ${topic == 2 ? 'active' : ''}`}>
                 <img src="/yellow-ico.png"/>
                 <div className="topics__item-content">
-                  <p className="topics__item-title">La busta paga</p>
-                  <p className="topics__item-subtitle">Le sezioni e le voci che puoi trovare all’interno e come leggerle</p>
+                  <p className="topics__item-title">La busta paga & IBAN</p>
+                  <p className="topics__item-subtitle">Come ottenere il codice IBAN, la sua utilità, alcuni consigli sulle diverse sezioni della busta paga e il loro contenuto</p>
                 </div>
               </div>
 
-              <div data-topic={3} onClick={() => handleChangeTopic(3, 'Modulo di onboarding & IBAN')} className={`topics__item topics__item--green ${topic == 3 ? 'active' : ''}`}>
+              <div data-topic={3} onClick={() => handleChangeTopic(3, 'Modulo di onboarding')} className={`topics__item topics__item--green ${topic == 3 ? 'active' : ''}`}>
                 <img src="/green-ico.png"/>
                 <div className="topics__item-content">
-                  <p className="topics__item-title">Modulo di onboarding & IBAN</p>
-                  <p className="topics__item-subtitle">Tutto ciò che ti serve sapere sulla compilazione del modulo di onboarding e sul codice IBAN</p>
+                  <p className="topics__item-title">Modulo di onboarding</p>
+                  <p className="topics__item-subtitle">Tutto ciò che ti serve sapere sulla compilazione del modulo di onboarding</p>
                 </div>
               </div>
 
@@ -125,7 +125,7 @@ const IndexPage = ({location, data}) => {
                       onClick={() => {
                         window.gtag('event', 'action', {'event_category': 'Download', 'event_label': 'PDF Click', 'value': 'La struttura del contratto'});
                       }}
-                      >La struttura del contratto <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.4137 1.5C8.4137 0.947715 7.96598 0.5 7.4137 0.5C6.86141 0.5 6.4137 0.947715 6.4137 1.5L8.4137 1.5ZM6.70659 17.2071C7.09711 17.5976 7.73028 17.5976 8.1208 17.2071L14.4848 10.8431C14.8753 10.4526 14.8753 9.81946 14.4848 9.42893C14.0942 9.03841 13.4611 9.03841 13.0706 9.42893L7.4137 15.0858L1.75684 9.42893C1.36632 9.03841 0.733152 9.03841 0.342628 9.42893C-0.0478962 9.81946 -0.0478962 10.4526 0.342628 10.8431L6.70659 17.2071ZM6.4137 1.5L6.4137 16.5L8.4137 16.5L8.4137 1.5L6.4137 1.5Z" fill="white"/></svg></a><p className="pdf-section__item-size">2 Mo</p></div>
+                      >La struttura del contratto <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.4137 1.5C8.4137 0.947715 7.96598 0.5 7.4137 0.5C6.86141 0.5 6.4137 0.947715 6.4137 1.5L8.4137 1.5ZM6.70659 17.2071C7.09711 17.5976 7.73028 17.5976 8.1208 17.2071L14.4848 10.8431C14.8753 10.4526 14.8753 9.81946 14.4848 9.42893C14.0942 9.03841 13.4611 9.03841 13.0706 9.42893L7.4137 15.0858L1.75684 9.42893C1.36632 9.03841 0.733152 9.03841 0.342628 9.42893C-0.0478962 9.81946 -0.0478962 10.4526 0.342628 10.8431L6.70659 17.2071ZM6.4137 1.5L6.4137 16.5L8.4137 16.5L8.4137 1.5L6.4137 1.5Z" fill="white"/></svg></a><p className="pdf-section__item-size">2 Mb</p></div>
                   </div>
                 </div>
               </div>
@@ -136,7 +136,7 @@ const IndexPage = ({location, data}) => {
       {topic == 2 && (
         <section className="section-media">
         <div className="container-faq">
-          <h2>Scopri la <strong>busta paga</strong></h2>
+          <h2>Scopri la <strong>busta paga</strong> & IBAN</h2>
         </div>
         <div className="container-faq-fluid">
           <div className="media">
@@ -168,7 +168,7 @@ const IndexPage = ({location, data}) => {
                       }}
                       target="_blank" 
                       href="/Busta-Paga-Struttura.pdf" 
-                      className="pdf-section__item-button">Esempio busta paga <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.4137 1.5C8.4137 0.947715 7.96598 0.5 7.4137 0.5C6.86141 0.5 6.4137 0.947715 6.4137 1.5L8.4137 1.5ZM6.70659 17.2071C7.09711 17.5976 7.73028 17.5976 8.1208 17.2071L14.4848 10.8431C14.8753 10.4526 14.8753 9.81946 14.4848 9.42893C14.0942 9.03841 13.4611 9.03841 13.0706 9.42893L7.4137 15.0858L1.75684 9.42893C1.36632 9.03841 0.733152 9.03841 0.342628 9.42893C-0.0478962 9.81946 -0.0478962 10.4526 0.342628 10.8431L6.70659 17.2071ZM6.4137 1.5L6.4137 16.5L8.4137 16.5L8.4137 1.5L6.4137 1.5Z" fill="white"/></svg></a><p className="pdf-section__item-size">618 Ko</p></div>
+                      className="pdf-section__item-button">Esempio busta paga <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.4137 1.5C8.4137 0.947715 7.96598 0.5 7.4137 0.5C6.86141 0.5 6.4137 0.947715 6.4137 1.5L8.4137 1.5ZM6.70659 17.2071C7.09711 17.5976 7.73028 17.5976 8.1208 17.2071L14.4848 10.8431C14.8753 10.4526 14.8753 9.81946 14.4848 9.42893C14.0942 9.03841 13.4611 9.03841 13.0706 9.42893L7.4137 15.0858L1.75684 9.42893C1.36632 9.03841 0.733152 9.03841 0.342628 9.42893C-0.0478962 9.81946 -0.0478962 10.4526 0.342628 10.8431L6.70659 17.2071ZM6.4137 1.5L6.4137 16.5L8.4137 16.5L8.4137 1.5L6.4137 1.5Z" fill="white"/></svg></a><p className="pdf-section__item-size">618 Kb</p></div>
                 </div>
               </div>
               {/* <div className="media-utils__item">
@@ -182,6 +182,39 @@ const IndexPage = ({location, data}) => {
                   <a className="pdf-section__item-link">Clickable link</a>
                 </div>
               </div> */}
+            </div>
+          </div>
+          <div className="media">
+            <div>
+              <div className="media__video">
+                <iframe
+                  width="853"
+                  height="480"
+                  src={`https://www.youtube.com/embed/JP74SITlKB4`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  autoplay
+                  title="Embedded youtube"
+                />
+              </div>
+              <p className='media__text'>*Premi sulle impostazioni del video per selezionare i sottotitoli nella tua lingua</p>
+            </div>
+            <div className="media-utils">
+              <div className="media-utils__item">
+                <p className="sigle-title">
+                  <img  src="/sigle.svg"/>
+                  Clicca ed inserisci il tuo IBAN
+                </p>
+                <div className="pdf-section">
+                  <a href='https://www.iziwork.com/dashboard' target='_blank' className="pdf-section__item-button">Inserisci il tuo IBAN <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.58862 5.63897L6.96777 3.5126C8.17131 1.65698 10.6512 1.12837 12.5069 2.33191V2.33191C14.3625 3.53545 14.8911 6.01538 13.6875 7.871L12.3084 9.99737" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M10.427 12.9022L9.04785 15.0285C7.84431 16.8842 5.36438 17.4128 3.50876 16.2092V16.2092C1.65315 15.0057 1.12454 12.5258 2.32808 10.6701L3.70723 8.54377" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="6.76768" y1="11.17" x2="9.23777" y2="7.36158" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -222,7 +255,7 @@ const IndexPage = ({location, data}) => {
                       }}
                       target="_blank" 
                       href="/Modulo-di-onboarding.pdf" 
-                      className="pdf-section__item-button">Esempio del modulo di onboarding <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.4137 1.5C8.4137 0.947715 7.96598 0.5 7.4137 0.5C6.86141 0.5 6.4137 0.947715 6.4137 1.5L8.4137 1.5ZM6.70659 17.2071C7.09711 17.5976 7.73028 17.5976 8.1208 17.2071L14.4848 10.8431C14.8753 10.4526 14.8753 9.81946 14.4848 9.42893C14.0942 9.03841 13.4611 9.03841 13.0706 9.42893L7.4137 15.0858L1.75684 9.42893C1.36632 9.03841 0.733152 9.03841 0.342628 9.42893C-0.0478962 9.81946 -0.0478962 10.4526 0.342628 10.8431L6.70659 17.2071ZM6.4137 1.5L6.4137 16.5L8.4137 16.5L8.4137 1.5L6.4137 1.5Z" fill="white"/></svg></a><p className="pdf-section__item-size">2 Mo</p></div>
+                      className="pdf-section__item-button">Esempio del modulo di onboarding <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.4137 1.5C8.4137 0.947715 7.96598 0.5 7.4137 0.5C6.86141 0.5 6.4137 0.947715 6.4137 1.5L8.4137 1.5ZM6.70659 17.2071C7.09711 17.5976 7.73028 17.5976 8.1208 17.2071L14.4848 10.8431C14.8753 10.4526 14.8753 9.81946 14.4848 9.42893C14.0942 9.03841 13.4611 9.03841 13.0706 9.42893L7.4137 15.0858L1.75684 9.42893C1.36632 9.03841 0.733152 9.03841 0.342628 9.42893C-0.0478962 9.81946 -0.0478962 10.4526 0.342628 10.8431L6.70659 17.2071ZM6.4137 1.5L6.4137 16.5L8.4137 16.5L8.4137 1.5L6.4137 1.5Z" fill="white"/></svg></a><p className="pdf-section__item-size">2 Mb</p></div>
                 </div>
               </div>
               <div className="media-utils__item">
@@ -237,39 +270,6 @@ const IndexPage = ({location, data}) => {
                       href='https://iziwork-votreavis.typeform.com/to/ZakxIZX9#email=xxxxx&tel=xxxxx&id=xxxxx&company=xxxxx&shiftid=xxxxx' 
                       target='_blank' 
                       className="pdf-section__item-button">Compila ora <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.58862 5.63897L6.96777 3.5126C8.17131 1.65698 10.6512 1.12837 12.5069 2.33191V2.33191C14.3625 3.53545 14.8911 6.01538 13.6875 7.871L12.3084 9.99737" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M10.427 12.9022L9.04785 15.0285C7.84431 16.8842 5.36438 17.4128 3.50876 16.2092V16.2092C1.65315 15.0057 1.12454 12.5258 2.32808 10.6701L3.70723 8.54377" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                  <line x1="6.76768" y1="11.17" x2="9.23777" y2="7.36158" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="media">
-            <div>
-              <div className="media__video">
-                <iframe
-                  width="853"
-                  height="480"
-                  src={`https://www.youtube.com/embed/JP74SITlKB4`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  autoplay
-                  title="Embedded youtube"
-                />
-              </div>
-              <p className='media__text'>*Premi sulle impostazioni del video per selezionare i sottotitoli nella tua lingua</p>
-            </div>
-            <div className="media-utils">
-              <div className="media-utils__item">
-                <p className="sigle-title">
-                  <img  src="/sigle.svg"/>
-                  Clicca e compila il modulo di onboarding
-                </p>
-                <div className="pdf-section">
-                  <a href='https://iziwork-votreavis.typeform.com/to/ZakxIZX9#email=xxxxx&tel=xxxxx&id=xxxxx&company=xxxxx&shiftid=xxxxx' target='_blank' className="pdf-section__item-button">Compila ora <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.58862 5.63897L6.96777 3.5126C8.17131 1.65698 10.6512 1.12837 12.5069 2.33191V2.33191C14.3625 3.53545 14.8911 6.01538 13.6875 7.871L12.3084 9.99737" stroke="white" stroke-width="2" stroke-linecap="round"/>
                   <path d="M10.427 12.9022L9.04785 15.0285C7.84431 16.8842 5.36438 17.4128 3.50876 16.2092V16.2092C1.65315 15.0057 1.12454 12.5258 2.32808 10.6701L3.70723 8.54377" stroke="white" stroke-width="2" stroke-linecap="round"/>
                   <line x1="6.76768" y1="11.17" x2="9.23777" y2="7.36158" stroke="white" stroke-width="2" stroke-linecap="round"/>
