@@ -427,6 +427,7 @@ header {
 
             .date {
                 font-size: 14px;
+                text-transform: uppercase;
                 font-weight: 300;
             }
             .button {
@@ -454,6 +455,7 @@ header {
                 flex-basis: 60%;
                 width: 60%;
                 object-fit: cover;
+                aspect-ratio: 4/2;
             }
             .article-content {
                 padding: 25px 50px;
@@ -489,6 +491,7 @@ header {
                 display: block;
                 border-radius: 15px;
                 object-fit: cover;
+                aspect-ratio: 4/2;
             }
 
             .article-content {
@@ -506,6 +509,7 @@ header {
                 .date {
                     font-size: 16px;
                     font-weight: 300;
+                    text-transform: uppercase;
                 }
                 .button {
                     padding: 10px 20px;

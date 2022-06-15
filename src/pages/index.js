@@ -295,9 +295,9 @@ const IndexPage = ({location, data}) => {
                 <img  src="/sigle.svg"/>
                 Onboarding Iziwork
               </p>
-              <p className="title">Boom di dimissioni nella fascia 25-35 anni</p>
-              <p className="date">21 GENNAIO 2022</p>
-              <a target="_blank" href='https://www.iziwork.com/it/blog/occupazione-ripresa-2021' className='button'>Read more</a>
+              <p className="title">L’importanza della formazione per il proprio futuro professionale</p>
+              <p className="date">01 marzo 2022</p>
+              <a target="_blank" href='https://www.iziwork.com/it/blog/formazione-professionale' className='button'>Read more</a>
             </div>
           </article>
           <div className="other-articles">
@@ -310,7 +310,7 @@ const IndexPage = ({location, data}) => {
                 </p>
                 <p className="title">Boom di dimissioni nella fascia 25-35 anni</p>
                 <p className="date">21 GENNAIO 2022</p>
-                <a target="_blank" href='https://www.iziwork.com/it/blog/occupazione-ripresa-2021' className='button'>Read more</a>
+                <a target="_blank" href='https://www.iziwork.com/it/blog/dimissioni-giovani' className='button'>Read more</a>
               </div>
             </article>
             <article className="normal-article">
@@ -319,9 +319,21 @@ const IndexPage = ({location, data}) => {
                 <p className="sigle-title"><img  src="/sigle.svg"/>
                   Onboarding Iziwork
                 </p>
-                <p className="title">Boom di dimissioni nella fascia 25-35 anni</p>
-                <p className="date">21 GENNAIO 2022</p>
+                <p className="title">Occupazione in ripresa nel 2021, ma non per le donne</p>
+                <p className="date">20 GENNAIO 2022</p>
                 <a target="_blank" href='https://www.iziwork.com/it/blog/occupazione-ripresa-2021' className='button'>Read more</a>
+              </div>
+            </article>
+            <article className="normal-article">
+              <img className="article-image" src="/article-dealflower.jpeg"/>
+              <div className="article-content">
+                <p className="sigle-title">
+                  <img  src="/sigle.svg"/>
+                  Onboarding Iziwork
+                </p>
+                <p className="title">Iziwork, l’evoluzione dell’agenzia per il lavoro passa da una “super app”</p>
+                <p className="date">9 Maggio 2022</p>
+                <a target="_blank" href='https://dealflower.it/iziwork-starup-italia-business-lavoro-somministrazione-tecnologia/' className='button'>Read more</a>
               </div>
             </article>
             <article className="normal-article">
@@ -331,21 +343,9 @@ const IndexPage = ({location, data}) => {
                   <img  src="/sigle.svg"/>
                   Onboarding Iziwork
                 </p>
-                <p className="title">Boom di dimissioni nella fascia 25-35 anni</p>
-                <p className="date">21 GENNAIO 2022</p>
-                <a target="_blank" href='https://www.iziwork.com/it/blog/occupazione-ripresa-2021' className='button'>Read more</a>
-              </div>
-            </article>
-            <article className="normal-article">
-              <img className="article-image" src="/image.jpg"/>
-              <div className="article-content">
-                <p className="sigle-title">
-                  <img  src="/sigle.svg"/>
-                  Onboarding Iziwork
-                </p>
-                <p className="title">Boom di dimissioni nella fascia 25-35 anni</p>
-                <p className="date">21 GENNAIO 2022</p>
-                <a target="_blank" href='https://www.iziwork.com/it/blog/occupazione-ripresa-2021' className='button'>Read more</a>
+                <p className="title">Le 5 migliori app per trovare lavoro in Italia</p>
+                <p className="date">7 aprile 2022</p>
+                <a target="_blank" href='https://www.gqitalia.it/tech/article/5-migliori-app-trovare-lavoro-italia' className='button'>Read more</a>
               </div>
             </article>
           </div>
