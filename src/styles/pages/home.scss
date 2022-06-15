@@ -288,6 +288,14 @@ header {
             }
         }
 
+        &__text {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            color: $text-color;
+            margin-left: 10px;
+        }
+
         &-utils {
             padding: 50px 0 0;     
             

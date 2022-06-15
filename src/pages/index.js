@@ -95,16 +95,19 @@ const IndexPage = ({location, data}) => {
           </header>
           <div className="container-faq-fluid">
             <div className="media">
-              <div className="media__video">
-                <iframe
-                  width="853"
-                  height="480"
-                  src={`https://www.youtube.com/embed/kQLwIQCjoIE`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  title="Embedded youtube"
-                />
+              <div>
+                <div className="media__video">
+                  <iframe
+                    width="853"
+                    height="480"
+                    src={`https://www.youtube.com/embed/kQLwIQCjoIE`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="Embedded youtube"
+                  />
+                </div>
+                <p className='media__text'>*Premi sulle impostazioni del video per selezionare i sottotitoli nella tua lingua</p>
               </div>
               <div className="media-utils">
                 <div className="media-utils__item">
@@ -128,17 +131,20 @@ const IndexPage = ({location, data}) => {
         </div>
         <div className="container-faq-fluid">
           <div className="media">
-            <div className="media__video">
-              <iframe
-                width="853"
-                height="480"
-                src={`https://www.youtube.com/embed/1T8_2xM1wcw`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                autoplay
-                title="Embedded youtube"
-              />
+            <div>
+              <div className="media__video">
+                <iframe
+                  width="853"
+                  height="480"
+                  src={`https://www.youtube.com/embed/1T8_2xM1wcw`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  autoplay
+                  title="Embedded youtube"
+                />
+              </div>
+              <p className='media__text'>*Premi sulle impostazioni del video per selezionare i sottotitoli nella tua lingua</p>
             </div>
             <div className="media-utils">
               <div className="media-utils__item">
@@ -173,17 +179,20 @@ const IndexPage = ({location, data}) => {
         </div>
         <div className="container-faq-fluid">
           <div className="media">
-            <div className="media__video">
-              <iframe
-                width="853"
-                height="480"
-                src={`https://www.youtube.com/embed/9rU9zqAxmso`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                autoplay
-                title="Embedded youtube"
-              />
+            <div>
+              <div className="media__video">
+                <iframe
+                  width="853"
+                  height="480"
+                  src={`https://www.youtube.com/embed/9rU9zqAxmso`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  autoplay
+                  title="Embedded youtube"
+                />
+              </div>
+              <p className='media__text'>*Premi sulle impostazioni del video per selezionare i sottotitoli nella tua lingua</p>
             </div>
             <div className="media-utils">
               <div className="media-utils__item">
@@ -212,17 +221,20 @@ const IndexPage = ({location, data}) => {
             </div>
           </div>
           <div className="media">
-            <div className="media__video">
-              <iframe
-                width="853"
-                height="480"
-                src={`https://www.youtube.com/embed/JP74SITlKB4`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                autoplay
-                title="Embedded youtube"
-              />
+            <div>
+              <div className="media__video">
+                <iframe
+                  width="853"
+                  height="480"
+                  src={`https://www.youtube.com/embed/JP74SITlKB4`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  autoplay
+                  title="Embedded youtube"
+                />
+              </div>
+              <p className='media__text'>*Premi sulle impostazioni del video per selezionare i sottotitoli nella tua lingua</p>
             </div>
             <div className="media-utils">
               <div className="media-utils__item">
