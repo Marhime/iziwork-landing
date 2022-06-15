@@ -289,20 +289,44 @@ const IndexPage = ({location, data}) => {
         <div className="container-faq-fluid">
 
           <article className="first-article">
-            <img className="article-image" src="/image.jpg"/>
+            <img className="article-image" src="/article-dealflower.jpeg"/>
             <div className="article-content">
               <p className="sigle-title">
                 <img  src="/sigle.svg"/>
                 Onboarding Iziwork
               </p>
-              <p className="title">L’importanza della formazione per il proprio futuro professionale</p>
-              <p className="date">01 marzo 2022</p>
-              <a target="_blank" href='https://www.iziwork.com/it/blog/formazione-professionale' className='button'>Read more</a>
+              <p className="title">Iziwork, l’evoluzione dell’agenzia per il lavoro passa da una “super app”</p>
+              <p className="date">9 Maggio 2022</p>
+              <a target="_blank" href='https://dealflower.it/iziwork-starup-italia-business-lavoro-somministrazione-tecnologia/' className='button'>Read more</a>
             </div>
           </article>
           <div className="other-articles">
             <article className="normal-article">
-              <img className="article-image" src="/image.jpg"/>
+              <img className="article-image" src="/iziwork-gq.webp"/>
+              <div className="article-content">
+                <p className="sigle-title">
+                  <img  src="/sigle.svg"/>
+                  Onboarding Iziwork
+                </p>
+                <p className="title">Le 5 migliori app per trovare lavoro in Italia</p>
+                <p className="date">7 aprile 2022</p>
+                <a target="_blank" href='https://www.gqitalia.it/tech/article/5-migliori-app-trovare-lavoro-italia' className='button'>Read more</a>
+              </div>
+            </article>
+            <article className="normal-article">
+              <img className="article-image" src="/L-importanza-della-formazione.jpeg"/>
+              <div className="article-content">
+                <p className="sigle-title">
+                  <img  src="/sigle.svg"/>
+                  Onboarding Iziwork
+                </p>
+                <p className="title">L’importanza della formazione per il proprio futuro professionale</p>
+                <p className="date">01 marzo 2022</p>
+                <a target="_blank" href='https://www.iziwork.com/it/blog/formazione-professionale' className='button'>Read more</a>
+              </div>
+            </article>
+            <article className="normal-article">
+              <img className="article-image" src="/Boom-di-dimissioni.jpeg"/>
               <div className="article-content">
                 <p className="sigle-title">
                   <img  src="/sigle.svg"/>
@@ -314,7 +338,7 @@ const IndexPage = ({location, data}) => {
               </div>
             </article>
             <article className="normal-article">
-              <img className="article-image" src="/image.jpg"/>
+              <img className="article-image" src="/Occupazione-in-ripresa.png"/>
               <div className="article-content">
                 <p className="sigle-title"><img  src="/sigle.svg"/>
                   Onboarding Iziwork
@@ -322,30 +346,6 @@ const IndexPage = ({location, data}) => {
                 <p className="title">Occupazione in ripresa nel 2021, ma non per le donne</p>
                 <p className="date">20 GENNAIO 2022</p>
                 <a target="_blank" href='https://www.iziwork.com/it/blog/occupazione-ripresa-2021' className='button'>Read more</a>
-              </div>
-            </article>
-            <article className="normal-article">
-              <img className="article-image" src="/article-dealflower.jpeg"/>
-              <div className="article-content">
-                <p className="sigle-title">
-                  <img  src="/sigle.svg"/>
-                  Onboarding Iziwork
-                </p>
-                <p className="title">Iziwork, l’evoluzione dell’agenzia per il lavoro passa da una “super app”</p>
-                <p className="date">9 Maggio 2022</p>
-                <a target="_blank" href='https://dealflower.it/iziwork-starup-italia-business-lavoro-somministrazione-tecnologia/' className='button'>Read more</a>
-              </div>
-            </article>
-            <article className="normal-article">
-              <img className="article-image" src="/image.jpg"/>
-              <div className="article-content">
-                <p className="sigle-title">
-                  <img  src="/sigle.svg"/>
-                  Onboarding Iziwork
-                </p>
-                <p className="title">Le 5 migliori app per trovare lavoro in Italia</p>
-                <p className="date">7 aprile 2022</p>
-                <a target="_blank" href='https://www.gqitalia.it/tech/article/5-migliori-app-trovare-lavoro-italia' className='button'>Read more</a>
               </div>
             </article>
           </div>
