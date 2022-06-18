@@ -1,0 +1,105 @@
+backend:
+  name: github
+  repo: Marhime/iziwork-landing
+  branch: cms # Branch to update (optional; defaults to master)
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/home/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page" }
+          - { label: "Title", default: 'Con iziwork rispondi a tutte le tue <strong>domande</strong> riguardo', name: "heading", widget: "string" }
+          - { label: "Subtitle", default: "Scegli l’argomento", name: "subtitle", widget: "string" }
+          - { label: "Title Blog Section", default: "Il blog", name: "titleBlogSection", hint: "This text will be displayed when there are no upcoming meetups", required: true, widget: "string" }
+  - name: "topics"
+    label: "Topics"
+    files:
+      - file: "src/pages/home/topics/first-topic.md"
+        label: "First Topic"
+        name: "firstTopic"
+        fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "first-topic" }
+          - {
+              label: "Topic Image",
+              name: "tapicImage",
+              widget: "object",
+              fields:
+                [
+                  { label: "Image", name: "image", widget: "image" },
+                  { label: "Image Description", name: "imageAlt", widget: "string" },
+                ],
+            }
+          - { label: "Title", default: 'Il lavoro in somministrazione', name: "firstTopicTitle", widget: "string" }
+          - { label: "Subtitle", default: "Il rapporto di lavoro in somministrazione e la struttura del contratto", name: "firstTopicSubtitle", widget: "string" }
+          - { label: "Media Section Title", default: "Come funziona il lavoro in somministrazione?", name: "noUpcomingMeetupText", hint: "This text will be displayed when there are no upcoming meetups", required: true, widget: "string" }
+          - {
+            label: "Media Section",
+            name: "sectionVideo",
+            required: true,
+            widget: "object",
+            fields:
+              [
+                {
+                  label: "Section Video 1",
+                  name: "sectionVideo1",
+                  required: true,
+                  widget: "object",
+                  fields:
+                    [
+                      { label: "Youtube video ID", name: "videoID", widget: "string" },
+                      { label: "Video small text helper", default: "*Premi sulle impostazioni del video per selezionare i sottotitoli nella tua lingua", name: "textHelper", widget: "string" },
+                      { label: "PDF Section Title", name: "pdfSectionTitle", widget: "string" },
+                      # { label: "Manual PDF 1",
+                      #   name: "manual_pdf",
+                      #   widget: "file",
+                      #   default: "/uploads/general-manual.pdf",
+                      # }
+                      # { label: "Manual PDF 2",
+                      #   name: "manual_pdf2",
+                      #   widget: "file",
+                      #   default: "/uploads/general-manual.pdf",
+                      # }
+                      # { label: "Manual PDF 3",
+                      #   name: "manual_pdf3",
+                      #   widget: "file",
+                      #   default: "/uploads/general-manual.pdf",
+                      # }
+                    ]
+                },
+                {
+                  label: "Section Video 2",
+                  name: "sectionVideo2",
+                  required: true,
+                  widget: "object",
+                  fields:
+                    [
+                      { label: "Youtube video ID", name: "videoID2", widget: "string" },
+                      { label: "Video small text helper", default: "*Premi sulle impostazioni del video per selezionare i sottotitoli nella tua lingua", name: "textHelper2", widget: "string" },
+                      { label: "PDF Section Title", name: "pdfSectionTitle2", widget: "string" },
+                      # { label: "Manual PDF 1",
+                      #   name: "manual_pdf",
+                      #   widget: "file",
+                      #   default: "/uploads/general-manual.pdf",
+                      # }
+                      # { label: "Manual PDF 2",
+                      #   name: "manual_pdf2",
+                      #   widget: "file",
+                      #   default: "/uploads/general-manual.pdf",
+                      # }
+                      # { label: "Manual PDF 3",
+                      #   name: "manual_pdf3",
+                      #   widget: "file",
+                      #   default: "/uploads/general-manual.pdf",
+                      # }
+                    ]
+                },
+                
+              ],
+          }
