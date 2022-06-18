@@ -1,5 +1,5 @@
 ---
-heading: Hello
+heading: HelloCoco
 subtitle: Hello
 titleBlogSection: Hello
 ---
