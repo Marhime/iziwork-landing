@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   repo: Marhime/iziwork-landing
   branch: cms # Branch to update (optional; defaults to master)
   commit_messages:
