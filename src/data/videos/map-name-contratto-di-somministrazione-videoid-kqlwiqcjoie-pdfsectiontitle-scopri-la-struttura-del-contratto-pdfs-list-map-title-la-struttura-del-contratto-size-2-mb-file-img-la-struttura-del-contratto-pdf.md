@@ -1,4 +1,5 @@
 ---
+topics: Il lavoro in somministrazione
 name: Contratto di somministrazione
 videoID: kQLwIQCjoIE
 pdfSectionTitle: SCOPRI LA STRUTTURA DEL CONTRATTO
