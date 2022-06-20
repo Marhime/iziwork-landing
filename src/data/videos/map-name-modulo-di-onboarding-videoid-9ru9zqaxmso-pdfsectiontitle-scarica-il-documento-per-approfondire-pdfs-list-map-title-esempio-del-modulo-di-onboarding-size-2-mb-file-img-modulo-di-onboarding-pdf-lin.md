@@ -1,4 +1,5 @@
 ---
+topics: Modulo di onboarding
 name: Modulo di onboarding
 videoID: 9rU9zqAxmso
 pdfSectionTitle: SCARICA IL DOCUMENTO PER APPROFONDIRE
