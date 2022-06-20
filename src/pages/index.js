@@ -15,7 +15,7 @@ const IndexPage = ({location, data}) => {
 
   const handleChangeTopic = (topic, topicName) => {
     setTopic(topic)
-    window.gtag('event', 'action', {'event_category': 'Change topic', 'event_label': 'Click topic', 'value': `${topicName}`});
+    // window.gtag('event', 'action', {'event_category': 'Change topic', 'event_label': 'Click topic', 'value': `${topicName}`});
     window.history.replaceState(null, document.title, `?topic=${topic}`);
     window.scrollTo({top: mediaSection.current.offsetTop, behavior: 'smooth'})
   }
