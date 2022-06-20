@@ -1,8 +1,12 @@
 ---
+name: Modulo di onboarding
 videoID: kQLwIQCjoIE
-pdfSectionTitle: SCOPRI LA STRUTTURA DEL CONTRATTO
+pdfSectionTitle: SCARICA IL DOCUMENTO PER APPROFONDIRE
 pdfs:
-  - title: La struttura del contratto
-    size: " 2 Mb"
-    file: /img/la-struttura-del-contratto.pdf
+  - title: Esempio del modulo di onboarding
+    size: 2 Mb
+    file: /img/modulo-di-onboarding.pdf
+linkSectionTitle: CLICCA E COMPILA IL MODULO DI ONBOARDING
+link:
+  - Compila ora
 ---
