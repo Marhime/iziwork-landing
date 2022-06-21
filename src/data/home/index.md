@@ -3,7 +3,7 @@ homeTitle: "Con iziwork rispondi a tutte le tue <strong>domande</strong> riguard
 homeSubtitle: <strong>Scegli</strong> l’argomento
 blueSection:
   blueSectionColor: blue
-  blueSectionTitle: Il lavoro in somministrazioneeeee
+  blueSectionTitle: Il lavoro in somministrazione
   blueSectionSubtitle: Il rapporto di lavoro in somministrazione e la struttura del contratto
   blueSectionFeaturedpost: /img/blue-icon.svg
   blueSectionVideoSectionTitle: Come funziona il <strong>lavoro in somministrazione</strong> ?
