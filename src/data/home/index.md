@@ -31,5 +31,21 @@ yellowSection:
       linkSectionTitle: CLICCA ED INSERISCI IL TUO IBAN
       yellowSectionVideoLinks:
         - linksTitle: Inserisci il tuo IBAN
+greenSection:
+  color: green
+  title: Modulo di onboarding
+  subtitle: Tutto ciò che ti serve sapere sulla compilazione del modulo di onboarding
+  videoSectionTitle: Scopri il modulo di onboarding
+  greenSectionVideo:
+    - name: Onboarding
+      greenSectionVideoVideoID: 9rU9zqAxmso
+      greenSectionVideoPdfSectionTitle: SCARICA IL DOCUMENTO PER APPROFONDIRE
+      greenSectionVideoPdfs:
+        - title: Esempio del modulo di onboarding
+          size: 2 Mb
+          file: /img/modulo-di-onboarding.pdf
+      linkSectionTitle: CLICCA E COMPILA IL MODULO DI ONBOARDING
+      greenSectionVideoLinks:
+        - linksTitle: Compila ora
 titleBlogSection: <strong>Il</strong> blog
 ---
