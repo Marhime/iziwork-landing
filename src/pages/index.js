@@ -16,6 +16,10 @@ const IndexPage = ({location, data}) => {
 
   const topics = useRef(null)
   const mediaSection = useRef(null)
+  const content = data.allMarkdownRemark.edges[0].node.frontmatter
+  const blueSection = data.allMarkdownRemark.edges[0].node.frontmatter.blueSection
+  const yellowSection = data.allMarkdownRemark.edges[0].node.frontmatter.yellowSection
+  const greenSection = data.allMarkdownRemark.edges[0].node.frontmatter.greenSection
   
   // const content = data.allFile.edges[0].node.childMarkdownRemark.frontmatter
   
@@ -63,26 +67,26 @@ const IndexPage = ({location, data}) => {
       </header>
       <section id="faq" className="section-header">
         <div className="container-faq">
-          {/* <h1 dangerouslySetInnerHTML={{__html: content.homeTitle}} />
-          <h2 dangerouslySetInnerHTML={{__html: content.homeSubtitle}} /> */}
+          <h1 dangerouslySetInnerHTML={{__html: content.homeTitle}} />
+          <h2 dangerouslySetInnerHTML={{__html: content.homeSubtitle}} />
           <div ref={topics} className="topics">
-            {/* <Topic dataTopic={1} data={content.blueSection} handleChangeTopic={handleChangeTopic} topic={topic} />
-            <Topic dataTopic={2} data={content.yellowSection} handleChangeTopic={handleChangeTopic} topic={topic} />
-            <Topic dataTopic={3} data={content.greenSection} handleChangeTopic={handleChangeTopic} topic={topic} /> */}
+            <Topic title={blueSection.blueSectionTitle} subtitle={blueSection.blueSectionSubtitle} featuredpost={blueSection.blueSectionFeaturedpost} color={blueSection.blueSectionColor} dataTopic={1} data={content.blueSection} handleChangeTopic={handleChangeTopic} topic={topic} />
+            <Topic title={yellowSection.yellowSectionTitle} subtitle={yellowSection.yellowSectionSubtitle} featuredpost={yellowSection.yellowSectionFeaturedpost} color={yellowSection.yellowSectionColor} data={content.yellowSection} dataTopic={2} handleChangeTopic={handleChangeTopic} topic={topic} />
+            <Topic dataTopic={3} title={greenSection.greenSectionTitle} subtitle={greenSection.greenSectionSubtitle} featuredpost={greenSection.greenSectionFeaturedpost} color={greenSection.greenSectionColor} data={content.greenSection}  handleChangeTopic={handleChangeTopic} topic={topic} />
           </div>
         </div>
       </section>
 
       <section ref={mediaSection}>
-        {/* {topic == 1 && (
-          <VideoSectionBlue data={content.blueSection}/>
+        {topic == 1 && (
+          <VideoSectionBlue data={blueSection}/>
         )}
         {topic == 2 && (
-          <VideoSectionYellow data={content.yellowSection}/>
+          <VideoSectionYellow data={yellowSection}/>
         )}
         {topic == 3 && (
-          <VideoSectionGreen data={content.greenSection}/>
-        )} */}
+          <VideoSectionGreen data={greenSection}/>
+        )}
       </section>
       
       <section id="blog" className="section-blog">
@@ -159,70 +163,86 @@ const IndexPage = ({location, data}) => {
 export default IndexPage
 
 
-// export const pageQuery = graphql` 
-//   query LandingPage {
-//     allFile {
-//       edges {
-//         node {
-//           sourceInstanceName
-//           childMarkdownRemark {
-//             frontmatter {
-//               homeTitle
-//               homeSubtitle
-//               titleBlogSection
-//               blueSection {
-//                 blueSectionVideo {
-//                   blueSectionVideoPdfSectionTitle
-//                   blueSectionVideoPdfs {
-//                     title
-//                     size
-//                     file
-//                   }
-//                   name
-//                 }
-//                 videoSectionTitle
-//                 title
-//                 subtitle
-//                 featuredpost
-//                 color
-//               }
-//               yellowSection {
-//                 color
-//                 featuredpost
-//                 subtitle
-//                 title
-//                 videoSectionTitle
-//                 yellowSectionVideo {
-//                   yellowSectionVideoLinks {
-//                     linksTitle
-//                   }
-//                   yellowSectionVideoPdfs {
-//                     title
-//                     file
-//                     size
-//                   }
-//                   yellowSectionVideoVideoID
-//                   yellowSectionVideoPdfSectionTitle
-//                   linkSectionTitle
-//                 }
-//               }
-//               greenSection {
-//                 color
-//                 title
-//                 subtitle
-//                 videoSectionTitle
-//                 greenSectionVideo {
-//                   name
-//                   greenSectionVideoVideoID
-//                   greenSectionVideoPdfSectionTitle
-//                   linkSectionTitle
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
+export const pageQuery = graphql` 
+  query Landing {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            blueSection {
+              blueSectionVideo {
+                blueSectionVideoPdfs {
+                  blueSectionVideoPdfsTitle
+                  blueSectionVideoPdfsSize
+                  blueSectionVideoPdfsFile
+                }
+                blueSectionVideoPdfSectionTitle
+                blueSectionVideoName
+                blueSectionVideoVideoID
+              }
+              blueSectionTitle
+              blueSectionSubtitle
+              blueSectionFeaturedpost
+              blueSectionColor
+              blueSectionVideoSectionTitle
+            }
+            greenSection {
+              greenSectionColor
+              greenSectionFeaturedpost
+              greenSectionSubtitle
+              greenSectionTitle
+              greenSectionVideo {
+                greenSectionLinkSectionTitle
+                greenSectionVideoLinks {
+                  greenSectionLinksTitle
+                  greenSectionLinksUrl
+                }
+                greenSectionVideoPdfSectionTitle
+                greenSectionVideoName
+                greenSectionVideoPdfs {
+                  greenSectionVideoPdfsSize
+                  greenSectionVideoPdfsFile
+                  greenSectionVideoPdfsTitle
+                }
+                greenSectionVideoVideoID
+              }
+              greenSectionVideoSectionTitle
+            }
+            homeSubtitle
+            homeTitle
+            title
+            titleBlogSection
+            yellowSection {
+              yellowSectionColor
+              yellowSectionTitle
+              yellowSectionSubtitle
+              yellowSectionFeaturedpost
+              yellowSectionVideo {
+                yellowSectionVideoPdfSectionTitle
+                yellowSectionVideoName
+                yellowSectionVideoPdfs {
+                  yellowSectionVideoPdfsFile
+                  yellowSectionVideoPdfsSize
+                  yellowSectionVideoPdfsTitle
+                }
+                yellowSectionVideoVideoID
+              }
+              yellowSectionVideo2 {
+                yellowSectionLinkSectionTitle
+                yellowSectionVideo2Links {
+                  yellowSection2LinksTitle
+                  yellowSection2LinksUrl
+                }
+                yellowSectionVideo2Name
+                yellowSectionVideo2PdfSectionTitle
+                yellowSectionVideo2VideoID
+              }
+              yellowSectionVideoSectionTitle
+            }
+          }
+        }
+      }
+    }
+  }
 
-// `;
+`;
