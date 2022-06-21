@@ -17,7 +17,7 @@ const IndexPage = ({location, data}) => {
   const topics = useRef(null)
   const mediaSection = useRef(null)
   
-  const content = data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+  // const content = data.allFile.edges[0].node.childMarkdownRemark.frontmatter
   
   const handleChangeTopic = (topic, topicName) => {
     setTopic(topic)
@@ -63,18 +63,18 @@ const IndexPage = ({location, data}) => {
       </header>
       <section id="faq" className="section-header">
         <div className="container-faq">
-          <h1 dangerouslySetInnerHTML={{__html: content.homeTitle}} />
-          <h2 dangerouslySetInnerHTML={{__html: content.homeSubtitle}} />
+          {/* <h1 dangerouslySetInnerHTML={{__html: content.homeTitle}} />
+          <h2 dangerouslySetInnerHTML={{__html: content.homeSubtitle}} /> */}
           <div ref={topics} className="topics">
-            <Topic dataTopic={1} data={content.blueSection} handleChangeTopic={handleChangeTopic} topic={topic} />
+            {/* <Topic dataTopic={1} data={content.blueSection} handleChangeTopic={handleChangeTopic} topic={topic} />
             <Topic dataTopic={2} data={content.yellowSection} handleChangeTopic={handleChangeTopic} topic={topic} />
-            <Topic dataTopic={3} data={content.greenSection} handleChangeTopic={handleChangeTopic} topic={topic} />
+            <Topic dataTopic={3} data={content.greenSection} handleChangeTopic={handleChangeTopic} topic={topic} /> */}
           </div>
         </div>
       </section>
 
       <section ref={mediaSection}>
-        {topic == 1 && (
+        {/* {topic == 1 && (
           <VideoSectionBlue data={content.blueSection}/>
         )}
         {topic == 2 && (
@@ -82,7 +82,7 @@ const IndexPage = ({location, data}) => {
         )}
         {topic == 3 && (
           <VideoSectionGreen data={content.greenSection}/>
-        )}
+        )} */}
       </section>
       
       <section id="blog" className="section-blog">
@@ -159,70 +159,70 @@ const IndexPage = ({location, data}) => {
 export default IndexPage
 
 
-export const pageQuery = graphql` 
-  query LandingPage {
-    allFile {
-      edges {
-        node {
-          sourceInstanceName
-          childMarkdownRemark {
-            frontmatter {
-              homeTitle
-              homeSubtitle
-              titleBlogSection
-              blueSection {
-                blueSectionVideo {
-                  blueSectionVideoPdfSectionTitle
-                  blueSectionVideoPdfs {
-                    title
-                    size
-                    file
-                  }
-                  name
-                }
-                videoSectionTitle
-                title
-                subtitle
-                featuredpost
-                color
-              }
-              yellowSection {
-                color
-                featuredpost
-                subtitle
-                title
-                videoSectionTitle
-                yellowSectionVideo {
-                  yellowSectionVideoLinks {
-                    linksTitle
-                  }
-                  yellowSectionVideoPdfs {
-                    title
-                    file
-                    size
-                  }
-                  yellowSectionVideoVideoID
-                  yellowSectionVideoPdfSectionTitle
-                  linkSectionTitle
-                }
-              }
-              greenSection {
-                color
-                title
-                subtitle
-                videoSectionTitle
-                greenSectionVideo {
-                  name
-                  greenSectionVideoVideoID
-                  greenSectionVideoPdfSectionTitle
-                  linkSectionTitle
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+// export const pageQuery = graphql` 
+//   query LandingPage {
+//     allFile {
+//       edges {
+//         node {
+//           sourceInstanceName
+//           childMarkdownRemark {
+//             frontmatter {
+//               homeTitle
+//               homeSubtitle
+//               titleBlogSection
+//               blueSection {
+//                 blueSectionVideo {
+//                   blueSectionVideoPdfSectionTitle
+//                   blueSectionVideoPdfs {
+//                     title
+//                     size
+//                     file
+//                   }
+//                   name
+//                 }
+//                 videoSectionTitle
+//                 title
+//                 subtitle
+//                 featuredpost
+//                 color
+//               }
+//               yellowSection {
+//                 color
+//                 featuredpost
+//                 subtitle
+//                 title
+//                 videoSectionTitle
+//                 yellowSectionVideo {
+//                   yellowSectionVideoLinks {
+//                     linksTitle
+//                   }
+//                   yellowSectionVideoPdfs {
+//                     title
+//                     file
+//                     size
+//                   }
+//                   yellowSectionVideoVideoID
+//                   yellowSectionVideoPdfSectionTitle
+//                   linkSectionTitle
+//                 }
+//               }
+//               greenSection {
+//                 color
+//                 title
+//                 subtitle
+//                 videoSectionTitle
+//                 greenSectionVideo {
+//                   name
+//                   greenSectionVideoVideoID
+//                   greenSectionVideoPdfSectionTitle
+//                   linkSectionTitle
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
 
-`;
+// `;
