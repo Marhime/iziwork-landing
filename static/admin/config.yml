@@ -1,0 +1,223 @@
+backend:
+  name: github
+  repo: Marhime/iziwork-landing
+  branch: main # Branch to update (optional; defaults to master)
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/data/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "blogTemplateKey",
+          widget: "hidden",
+          default: "blog-post",
+        }
+      - { label: "Title",  name: "title", widget: "string" }
+      - { label: "Publish Date",  name: "date", widget: "datetime" }
+      - { label: "Category",  name: "category", widget: "string" }
+      - { label: "Featured Post",  name: "featuredpost", widget: "boolean", required: false }
+      - { label: "Featured Image",  name: "featuredimage", widget: image }
+      - { label: "Link",  name: "link", widget: "string" }
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/data/home/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - { label: "Template Key",  name: "homeTemplateKey", widget: "hidden", default: "home-page" }
+          - { label: "Title", default: 'Con iziwork rispondi a tutte le tue <strong>domande</strong> riguardo',  name: "homeTitle", widget: "string" }
+          - { label: "Subtitle", default: "Scegli l’argomento",  name: "homeSubtitle", widget: "string" }
+          - { label: Blue section,
+              name: blueSection,
+              widget: object,
+              fields:
+                [
+                  { label: "color",  name: "blueSectionColor", widget: "select", options: ["blue", "yellow", "green"], default: "blue" },
+                  { label: "Title",  name: "blueSectionTitle", widget: "string" },
+                  { label: "Subtitle",  name: "blueSectionSubtitle", widget: "string" },
+                  { label: "Image",  name: "blueSectionFeaturedpost", widget: "image" },
+                  { label: "Video Section Title",  name: "blueSectionVideoSectionTitle", widget: "string" },
+                  { label: "Video",
+                    name: "blueSectionVideo",
+                    widget: "object",
+                    collapsed: true,
+                    fields:
+                      [
+                        { label: "Name",  name: "blueSectionVideoName", widget: "string" },
+                        { label: "Youtube Video ID",  name: "blueSectionVideoVideoID", widget: "string" },
+                        { label: "PDF Section Title", required: false, name: "blueSectionVideoPdfSectionTitle", widget: "string" },
+                        { label: "PDF",
+                            name: "blueSectionVideoPdfs",
+                            widget: "list",
+                            summary: '{{fields.title}}',
+                            collapsed: false,
+                            required: false,
+                            fields: [
+                              { label: "Title",  name: "blueSectionVideoPdfsTitle", widget: "string" },
+                              { label: "Size",  name: "blueSectionVideoPdfsSize", widget: "string" },
+                              { label: "File",  name: "blueSectionVideoPdfsFile", widget: "file" },
+                            ]
+                        },
+                        { label: "Link Section Title", required: false, name: "blueSectionLinkSectionTitle", widget: "string" },
+                        { label: "Links",
+                            name: "blueSectionVideoLinks",
+                            widget: "list",
+                            summary: '{{fields.linksTitle}}',
+                            collapsed: false,
+                            required: false,
+                            fields: [
+                              { label: "Title",  name: "blueSectionLinksTitle", widget: "string" },
+                              { label: "Url",  name: "blueSectionLinksUrl", widget: "string" },
+                            ]
+                        },
+                      ],
+                  },
+                ],
+            }
+          - { label: Yellow section,
+              name: yellowSection,
+              widget: object,
+              collapsed: true,
+              fields:
+                [
+                  { label: "color",  name: "yellowSectionColor", widget: "select", options: ["blue", "yellow", "green"], default: "blue" },
+                  { label: "Title",  name: "yellowSectionTitle", widget: "string" },
+                  { label: "Subtitle",  name: "yellowSectionSubtitle", widget: "string" },
+                  { label: "Image",  name: "yellowSectionFeaturedpost", widget: "image" },
+                  { label: "Video Section Title", required: false, name: "yellowSectionVideoSectionTitle", widget: "string" },
+                  { label: "Video",
+                    name: "yellowSectionVideo",
+                    widget: "object",
+                    collapsed: true,
+                    fields:
+                      [
+                        { label: "Name",  name: "yellowSectionVideoName", widget: "string" },
+                        { label: "Youtube Video ID",  name: "yellowSectionVideoVideoID", widget: "string" },
+                        { label: "PDF Section Title", required: false, name: "yellowSectionVideoPdfSectionTitle", widget: "string" },
+                        { label: "PDF",
+                            name: "yellowSectionVideoPdfs",
+                            widget: "list",
+                            summary: '{{fields.title}}',
+                            collapsed: false,
+                            required: false,
+                            fields: [
+                              { label: "Title",  name: "yellowSectionVideoPdfsTitle", widget: "string" },
+                              { label: "Size",  name: "yellowSectionVideoPdfsSize", widget: "string" },
+                              { label: "File",  name: "yellowSectionVideoPdfsFile", widget: "file" },
+                            ]
+                        },
+                        { label: "Link Section Title", required: false, name: "yellowSectionLinkSectionTitle", widget: "string" },
+                        { label: "Links",
+                            name: "yellowSectionVideoLinks",
+                            widget: "list",
+                            summary: '{{fields.linksTitle}}',
+                            collapsed: false,
+                            required: false,
+                            fields: [
+                              { label: "Title",  name: "yellowSectionLinksTitle", widget: "string" },
+                              { label: "Url",  name: "yellowSectionLinksUrl", widget: "string" },
+                            ]
+                        },
+                      ],
+                  },
+                  { label: "Video 2",
+                    name: "yellowSectionVideo2",
+                    widget: "object",
+                    collapsed: true,
+                    required: false,
+                    fields:
+                      [
+                        { label: "Name",  name: "yellowSectionVideo2Name", widget: "string" },
+                        { label: "Youtube Video ID",  name: "yellowSectionVideo2VideoID", widget: "string" },
+                        { label: "PDF Section Title", required: false, name: "yellowSectionVideo2PdfSectionTitle", widget: "string" },
+                        { label: "PDF",
+                            name: "yellowSectionVideo2Pdfs",
+                            widget: "list",
+                            summary: '{{fields.title}}',
+                            collapsed: false,
+                            required: false,
+                            fields: [
+                              { label: "Title",  name: "yellowSectionVideo2PdfsTitle", widget: "string" },
+                              { label: "Size",  name: "yellowSectionVideo2PdfsSize", widget: "string" },
+                              { label: "File",  name: "yellowSectionVideo2PdfsFile", widget: "file" },
+                            ]
+                        },
+                        { label: "Link Section Title", required: false, name: "yellowSectionLinkSectionTitle", widget: "string" },
+                        { label: "Links",
+                            name: "yellowSectionVideo2Links",
+                            widget: "list",
+                            summary: '{{fields.linksTitle}}',
+                            collapsed: false,
+                            required: false,
+                            fields: [
+                              { label: "Title",  name: "yellowSection2LinksTitle", widget: "string" },
+                              { label: "Url",  name: "yellowSection2LinksUrl", widget: "string" },
+                            ]
+                        },
+                      ],
+                  },
+                ],
+            }
+          - { label: Green section,
+              name: greenSection,
+              widget: object,
+              collapsed: true,
+              fields:
+                [
+                  { label: "color",  name: "greenSectionColor", widget: "select", options: ["blue", "yellow", "green"], default: "blue" },
+                  { label: "Title",  name: "greenSectionTitle", widget: "string" },
+                  { label: "Subtitle",  name: "greenSectionSubtitle", widget: "string" },
+                  { label: "Image",  name: "greenSectionFeaturedpost", widget: "image" },
+                  { label: "Video Section Title", name: "greenSectionVideoSectionTitle", widget: "string" },
+                  { label: "Video",
+                    name: "greenSectionVideo",
+                    widget: "object",
+                    collapsed: true,
+                    fields:
+                      [
+                        { label: "Name",  name: "greenSectionVideoName", widget: "string" },
+                        { label: "Youtube Video ID", name: "greenSectionVideoVideoID", widget: "string" },
+                        { label: "PDF Section Title", required: false, name: "greenSectionVideoPdfSectionTitle", widget: "string" },
+                        { label: "PDF",
+                            name: "greenSectionVideoPdfs",
+                            widget: "list",
+                            summary: '{{fields.title}}',
+                            collapsed: false,
+                            required: false,
+                            fields: [
+                              { label: "Title",  name: "greenSectionVideoPdfsTitle", widget: "string" },
+                              { label: "Size",  name: "greenSectionVideoPdfsSize", widget: "string" },
+                              { label: "File",  name: "greenSectionVideoPdfsFile", widget: "file" },
+                            ]
+                        },
+                        { label: "Link Section Title", required: false, name: "greenSectionLinkSectionTitle", widget: "string" },
+                        { label: "Links",
+                            name: "greenSectionVideoLinks",
+                            widget: "list",
+                            summary: '{{fields.linksTitle}}',
+                            collapsed: false,
+                            required: false,
+                            fields: [
+                              { label: "Title",  name: "greenSectionLinksTitle", widget: "string" },
+                              { label: "Url",  name: "greenSectionLinksUrl", widget: "string" },
+                            ]
+                        },
+                      ],
+                  },
+                ],
+            }
+          - { label: "Title Blog Section", default: "Il blog",  name: "titleBlogSection", hint: "Title for the section blog", widget: "string" }
