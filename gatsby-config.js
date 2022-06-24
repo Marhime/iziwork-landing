@@ -45,6 +45,13 @@ module.exports = {
        },
     },
     {
+      resolve: 'gatsby-source-filesystem', 
+      options: { 
+        name: 'blog',
+        path: `${__dirname}/src/data/blog`,
+       },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         // Footnotes mode (default: true)
