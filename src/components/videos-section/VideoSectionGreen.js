@@ -41,6 +41,29 @@ function VideoSectionBlue({data}) {
                                 ))}
                             </div>
                         </div>
+                        <div className="media-utils__item">
+                            <p className="sigle-title">
+                                <img alt='' src="/sigle.svg"/>
+                                {greenSectionVideo.greenSectionLinkSectionTitle}
+                            </p>
+                            <div className="pdf-section">
+                                {greenSectionVideo.greenSectionVideoLinks.map((link) => (
+                                    <div className="pdf-section__item">
+                                    <a onClick={() => {
+                                            window.gtag('event', 'action', {'event_category': 'Typeform', 'event_label': 'Typeform Click', 'value': 'Compila ora'});
+                                            }}
+                                            href={link.greenSectionLinksUrl} 
+                                            target='_blank' 
+                                            className="pdf-section__item-button">{link.greenSectionLinksTitle} <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.58862 5.63897L6.96777 3.5126C8.17131 1.65698 10.6512 1.12837 12.5069 2.33191V2.33191C14.3625 3.53545 14.8911 6.01538 13.6875 7.871L12.3084 9.99737" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                            <path d="M10.427 12.9022L9.04785 15.0285C7.84431 16.8842 5.36438 17.4128 3.50876 16.2092V16.2092C1.65315 15.0057 1.12454 12.5258 2.32808 10.6701L3.70723 8.54377" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                            <line x1="6.76768" y1="11.17" x2="9.23777" y2="7.36158" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

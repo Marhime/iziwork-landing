@@ -221,3 +221,5 @@ collections:
                 ],
             }
           - { label: "Title Blog Section", default: "Il blog",  name: "titleBlogSection", hint: "Title for the section blog", widget: "string" }
+    editor:
+      preview: false
