@@ -1,4 +1,5 @@
 ---
+topicOrder: 2
 topicImage: /img/yellow-ico.png
 topicTitle: La busta paga & IBAN
 topicSubtitle: Come ottenere il codice IBAN, la sua utilità, alcuni consigli
