@@ -1,6 +1,6 @@
 ---
 topicImage: /img/blue-icon.svg
-topicTitle: Il lavoro in somministrazione
+topicTitle: Il lavoro in somministrazion
 topicSubtitle: Il rapporto di lavoro in somministrazione e la struttura del contratto
 topicSectionTitle: Come funziona il <strong>lavoro in somministrazione</strong> ?
 topicVideoSection:
