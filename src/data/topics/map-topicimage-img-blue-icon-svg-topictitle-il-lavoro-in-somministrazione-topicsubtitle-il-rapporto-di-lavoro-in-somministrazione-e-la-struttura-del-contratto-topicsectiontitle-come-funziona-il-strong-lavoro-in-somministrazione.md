@@ -1,4 +1,5 @@
 ---
+topicOrder: 1
 topicImage: /img/blue-icon.svg
 topicTitle: Il lavoro in somministrazion
 topicSubtitle: Il rapporto di lavoro in somministrazione e la struttura del contratto
