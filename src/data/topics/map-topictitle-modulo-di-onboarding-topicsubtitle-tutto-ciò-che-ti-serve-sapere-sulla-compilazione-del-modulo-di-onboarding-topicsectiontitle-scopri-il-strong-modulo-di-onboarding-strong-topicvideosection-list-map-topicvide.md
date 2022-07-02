@@ -1,4 +1,5 @@
 ---
+topicOrder: 3
 topicImage: /img/green-ico.png
 topicTitle: Modulo di onboarding
 topicSubtitle: Tutto ciò che ti serve sapere sulla compilazione del modulo di onboarding
