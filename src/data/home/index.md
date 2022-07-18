@@ -37,7 +37,7 @@ yellowSection:
     yellowSectionLinkSectionTitle: CLICCA ED INSERISCI IL TUO IBAN
     yellowSectionVideo2Links:
       - yellowSection2LinksTitle: Inserisci il tuo IBAN
-        yellowSection2LinksUrl: https://www.iziwork.com/dashboard
+        yellowSection2LinksUrl: https://www.iziwork.com/dl/document/personal
 greenSection:
   greenSectionColor: green
   greenSectionTitle: Modulo di onboarding
