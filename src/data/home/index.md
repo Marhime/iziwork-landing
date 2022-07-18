@@ -34,10 +34,12 @@ yellowSection:
     yellowSectionVideo2Name: IBAN
     yellowSectionVideo2VideoID: JP74SITlKB4
     yellowSectionVideo2PdfSectionTitle: ""
-    yellowSectionLinkSectionTitle: CLICCA ED INSERISCI IL TUO IBAN
+    yellowSectionLinkSectionTitle: SCARICA L'APP ED INSERISCI IL TUO IBAN
     yellowSectionVideo2Links:
-      - yellowSection2LinksTitle: Inserisci il tuo IBAN
-        yellowSection2LinksUrl: https://www.iziwork.com/dl/document/personal
+      - yellowSection2LinksTitle: Non hai l'app? Scaricala ora
+        yellowSection2LinksUrl: https://app.adjust.com/qnokgh9
+      - yellowSection2LinksUrl: https://www.iziwork.com/dl/document/personal
+        yellowSection2LinksTitle: Hai già l'app? Inserisci il tuo IBAN
 greenSection:
   greenSectionColor: green
   greenSectionTitle: Modulo di onboarding
