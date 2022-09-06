@@ -1,7 +1,7 @@
 ---
 blogTemplateKey: blog-post
 title: Lavoratori dipendenti -Tutto quello che è utile sapere sul Bonus 200€
-date: 2022-07-18T15:18:30.665Z
+date: 2022-07-19T15:18:30.665Z
 category: ONBOARDING IZIWORK
 featuredpost: true
 featuredimage: /img/progetto-senza-titolo-89-.png
