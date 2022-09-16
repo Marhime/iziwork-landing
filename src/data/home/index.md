@@ -17,7 +17,7 @@ blueSection:
         blueSectionVideoPdfsFile: /img/la-struttura-del-contratto.pdf
 yellowSection:
   yellowSectionColor: yellow
-  yellowSectionTitle: La busta paga & IBAN
+  yellowSectionTitle: La busta paga e l'IBAN
   yellowSectionSubtitle: Come ottenere il codice IBAN, la sua utilità, alcuni
     consigli sulle diverse sezioni della busta paga e il loro contenuto
   yellowSectionFeaturedpost: /img/yellow-ico.png
