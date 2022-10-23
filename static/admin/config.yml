@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: Marhime/iziwork-landing
-  branch: main # Branch to update (optional; defaults to master)
+  branch: cms # Branch to update (optional; defaults to master)
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
     update: "Update {{collection}} “{{slug}}”"
@@ -31,6 +31,53 @@ collections:
       - { label: "Featured Post",  name: "featuredpost", widget: "boolean", required: false }
       - { label: "Featured Image",  name: "featuredimage", widget: image }
       - { label: "Link",  name: "link", widget: "string" }
+  - name: "topics"
+    label: "Topics"
+    folder: "src/data/topics"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Order",  name: "topicOrder", widget: number }
+      - { label: "Topic Image",  name: "topicImage", widget: image }
+      - { label: "Title", name: "topicTitle", widget: "string" }
+      - { label: "Subtitle", name: "topicSubtitle", widget: "string" }
+      - { label: "Video Section Title", name: "topicSectionTitle", widget: "string" }
+      - { label: "Videos",
+          name: "topicVideoSection",
+          widget: "list",
+          summary: '{{fields.topicVideoName}}',
+          collapsed: true,
+          required: false,
+          fields: [
+            { label: "Video Name",  name: "topicVideoName", widget: "string" },
+            { label: "Url",  name: "topicLinksUrl", widget: "string" },
+            { label: "PDF Section Title", required: false, name: "topicSectionPDFTitle", widget: "string" },
+            { label: "PDF",
+              name: "topicPdfs",
+              widget: "list",
+              summary: '{{fields.topicPdfTitle}}',
+              collapsed: true,
+              required: false,
+              fields: [
+                { label: "Title",  name: "topicPdfTitle", widget: "string" },
+                { label: "File",  name: "topicPdfFile", widget: "file" },
+                { label: "Size",  name: "topicPdfSize", widget: "string" },
+              ]
+            },
+            { label: "Links Section Title", required: false, name: "topicSectionLinkTitle", widget: "string" },
+            { label: "Links",
+                name: "topicLinks",
+                widget: "list",
+                summary: '{{fields.topicLinksTitle}}',
+                collapsed: true,
+                required: false,
+                fields: [
+                  { label: "Title", name: "topicLinksTitle", widget: "string" },
+                  { label: "Url",  name: "topicLinksUrl", widget: "string" },
+                ]
+            },
+          ]
+        }
   - name: "pages"
     label: "Pages"
     files:

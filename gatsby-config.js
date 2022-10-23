@@ -52,6 +52,13 @@ module.exports = {
        },
     },
     {
+      resolve: 'gatsby-source-filesystem', 
+      options: { 
+        name: 'topics',
+        path: `${__dirname}/src/data/topics`,
+       },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         // Footnotes mode (default: true)
